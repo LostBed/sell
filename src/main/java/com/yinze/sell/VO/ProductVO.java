@@ -3,6 +3,8 @@ package com.yinze.sell.VO;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * @Author: Yinze
  * @Created: 2018/6/22 17:55
@@ -17,7 +19,6 @@ public class ProductVO {
     private Integer categoryType;
     
     @JsonProperty("foods")
-    private List<>
-    
-    
+    private List<ProductInfoVO> productInfoVOList;
+
 }
