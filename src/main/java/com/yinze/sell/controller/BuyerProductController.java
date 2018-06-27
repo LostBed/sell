@@ -7,6 +7,7 @@ import com.yinze.sell.pojo.ProductCategory;
 import com.yinze.sell.pojo.ProductInfo;
 import com.yinze.sell.service.CategoryService;
 import com.yinze.sell.service.ProductService;
+import com.yinze.sell.utils.ResultVOUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -64,11 +65,6 @@ public class BuyerProductController {
             productVOList.add(productVO);
         }
 
-        ResultVo resultVo = new ResultVo();
-        resultVo.setData(productVOList);
-        resultVo.setCode(0);
-        resultVo.setMsg("成功");
-
-        return resultVo;
+        return ResultVOUtil.success(productVOList);
     }
 }
